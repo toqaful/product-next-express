@@ -1,0 +1,15 @@
+{
+  "name": "product-next-express",
+  "private": true,
+  "workspaces": [
+    "backend",
+    "frontend"
+  ],
+  "scripts": {
+    "dev": "concurrently \"npm run dev --workspace backend\" \"npm run dev --workspace frontend\"",
+    "build": "npm run build --workspace frontend"
+  },
+  "dependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
